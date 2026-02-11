@@ -1,4 +1,4 @@
-# Workshop: Multistep-formulär i React ☑️ ✅ 🚀
+# Workshop: Multistepformulär i React ☑️ ✅ 🚀
 
 Bygg ett multistepformulär med routing mellan stegen och delad state via Context.
 
