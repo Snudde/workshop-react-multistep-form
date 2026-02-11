@@ -202,5 +202,5 @@ Gör samma sak i `StepAddress`, `StepPreferences` och `Summary`.
 ## Diskutera 👥
 
 - Det här applikationen illustraterar användandet av global state med Context. 
-Den kunde dock ha lösts med props. När man utvecklar mer omfattande Reactapplikation, när bör man frångå props för att använda global state, exemepelvis med Context?
+Den kunde dock ha lösts med props. När man utvecklar mer omfattande Reactapplikationer, när bör man frångå props för att använda en lösning med globalt state (som exempelvis Context)
 
