@@ -2,23 +2,6 @@
 
 Bygg ett multistepformulär med routing mellan stegen och delad state via Context.
 
-## Filer du INTE ska ändra
-
-- `src/components/ProgressBar.tsx` — visuell stegindikator
-- `src/types/FormData.ts` — typer och initialdata
-
-## Filer du SKA ändra
-
-- `src/main.tsx` — lägg till RouterProvider och FormProvider
-- `src/router.tsx` — skapa denna fil med routes
-- `src/components/FormLayout.tsx` — lägg till Outlet och useLocation
-- `src/components/StepPersonalInfo.tsx` — lägg till context + navigering
-- `src/components/StepAddress.tsx` — lägg till context + navigering
-- `src/components/StepPreferences.tsx` — lägg till context + navigering
-- `src/components/Summary.tsx` — lägg till context + navigering
-- `src/context/FormContext.tsx` — skapa denna fil (del 2)
-
----
 
 ## Del 1: React Router 7
 
@@ -197,3 +180,21 @@ onChange={(e) => updateFormData({ firstName: e.target.value })}
 Gör samma sak i `StepAddress`, `StepPreferences` och `Summary`.
 
 **Testa:** Fyll i data i steg 1, gå till steg 2, gå tillbaka — din data ska finnas kvar.
+
+## Filer du INTE ska ändra
+
+- `src/components/ProgressBar.tsx` — visuell stegindikator
+- `src/types/FormData.ts` — typer och initialdata
+
+## Filer du SKA ändra
+
+- `src/main.tsx` — lägg till RouterProvider och FormProvider
+- `src/router.tsx` — skapa denna fil med routes
+- `src/components/FormLayout.tsx` — lägg till Outlet och useLocation
+- `src/components/StepPersonalInfo.tsx` — lägg till context + navigering
+- `src/components/StepAddress.tsx` — lägg till context + navigering
+- `src/components/StepPreferences.tsx` — lägg till context + navigering
+- `src/components/Summary.tsx` — lägg till context + navigering
+- `src/context/FormContext.tsx` — skapa denna fil (del 2)
+
+---
