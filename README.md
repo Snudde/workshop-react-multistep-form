@@ -17,7 +17,7 @@ Skapa `src/router.tsx`. Använd `createBrowserRouter` för att definiera routes.
 
 Använd `FormLayout` som layout-route (parent) och steg-komponenterna som children:
 
-| Sökväg | Komponent |
+| URL | Komponent |
 |--------|-----------|
 | `/` | `StepPersonalInfo` |
 | `/address` | `StepAddress` |
@@ -103,7 +103,7 @@ const currentStep = stepMap[location.pathname] || 1;
 
 ## Del 2: useContext
 
-Just nu har varje steg sin egen lokala state. Data försvinner när du navigerar mellan stegen. Vi löser det med Context.
+Du ska använda Context för att skapa och använda ett globalt state för formulärdata. Formulärdata ska uppdateras för respektive steg.
 
 ### 2.1 Skapa context-filen
 
@@ -198,3 +198,9 @@ Gör samma sak i `StepAddress`, `StepPreferences` och `Summary`.
 - `src/context/FormContext.tsx` — skapa denna fil (del 2)
 
 ---
+
+## Diskutera 👥
+
+- Det här applikationen illustraterar användandet av global state med Context. 
+Den kunde dock ha lösts med props. När man utvecklar mer omfattande Reactapplikation, när bör man frångå props för att använda global state, exemepelvis med Context?
+
