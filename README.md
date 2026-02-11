@@ -1,4 +1,4 @@
-# Workshop: React Router 7 & useContext ☑️ ✅ 🚀
+# Workshop: Multistep-formulär i React ☑️ ✅ 🚀
 
 Bygg ett multistepformulär med routing mellan stegen och delad state via Context.
 
