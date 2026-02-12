@@ -48,9 +48,9 @@ function Summary() {
           <h3 className="text-sm font-semibold text-indigo-600 uppercase tracking-wide">
             Preferenser
           </h3>
-          <p>  Newsletter: { formData.newsletter ? "tack" : "tack ändå" } </p>
-          <p> Preffered mode: { formData.darkMode ? "dark" : "light" } </p>
-          <p>  language: {languageLabels[formData.language]} </p>
+          <p>Nyhetsbrev: { formData.newsletter ? "tack" : "tack ändå" } </p>
+          <p>Tema: { formData.darkMode ? "dark" : "light" } </p>
+          <p>Språk: {languageLabels[formData.language]} </p>
         </div>
       </div>
 
