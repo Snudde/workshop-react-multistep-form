@@ -1,5 +1,8 @@
 // TODO: Använd dig av useFormContext för att hämta all FormData
+
+import useFormContext from "../hooks/useFormContext";
 // TODO: Använde dig av useNavigate för programmiskt navigation
+import { useNavigate } from "react-router";
 
 
 const languageLabels: Record<string, string> = {
@@ -12,6 +15,8 @@ const languageLabels: Record<string, string> = {
 
 function Summary() {
  
+  const {formData} = useFormContext();
+  let navigate = useNavigate();
 
   return (
     <div className="space-y-4">
@@ -22,8 +27,9 @@ function Summary() {
           <h3 className="text-sm font-semibold text-indigo-600 uppercase tracking-wide">
             Personlig information
           </h3>
-          {/* TODO: <p>{formData.firstName} {formData.lastName}</p> */}
-          {/* TODO: <p>{formData.email}</p> */}
+          <p>{formData.firstName} {formData.lastName}</p>
+          
+          <p>{formData.email}</p>
         </div>
 
         <hr className="border-gray-200" />
@@ -32,8 +38,8 @@ function Summary() {
           <h3 className="text-sm font-semibold text-indigo-600 uppercase tracking-wide">
             Adress
           </h3>
-          {/* TODO: <p>{formData.street}</p> */}
-          {/* TODO: <p>{formData.zipCode} {formData.city}</p> */}
+          <p>{formData.street}</p>
+          <p>{formData.zipCode} {formData.city}</p>
         </div>
 
         <hr className="border-gray-200" />
@@ -42,19 +48,22 @@ function Summary() {
           <h3 className="text-sm font-semibold text-indigo-600 uppercase tracking-wide">
             Preferenser
           </h3>
-          {/* TODO: visa formData.newsletter, formData.darkMode, formData.language */}
+          <p>  Newsletter: { formData.newsletter ? "tack" : "tack ändå" } </p>
+          <p> Preffered mode: { formData.darkMode ? "dark" : "light" } </p>
+          <p>  language: {languageLabels[formData.language]} </p>
         </div>
       </div>
 
       <div className="flex justify-between pt-4">
         <button
-          // TODO: onClick={() => navigate("/preferences")}
+          onClick={() => navigate("/preferences")}
           className="border border-gray-300 text-gray-600 px-6 py-2 rounded-lg hover:bg-gray-50 transition font-medium cursor-pointer"
         >
           Tillbaka
         </button>
         <button
           // TODO: onClick för att hantera inskickning
+          onClick={() => navigate("/thankyou")}
           className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition font-medium cursor-pointer"
         >
           Skicka
